@@ -22,6 +22,12 @@ yarn-error.log*
 # local env files
 .env*.local
 
+# IDE - IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+
 out/
 build/
 dist/
