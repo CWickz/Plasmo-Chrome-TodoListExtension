@@ -1,90 +1,57 @@
-Task Flow
-A modern, glassmorphic Chrome extension designed for effortless task management and quick clipboard snippet storage. Built with Plasmo, React, and TypeScript.
+Task Flow v1.0 ⚡
+A high-performance, glassmorphic task manager and clipboard suite built for Chrome using Plasmo, React, and TypeScript.
 
-Features
-Glassmorphic UI & Smooth Animation: Modern frosted-glass aesthetic with fluid micro-interactions and smooth elastic scrolling.
+🛠️ Tech Stack
+Framework: Plasmo Framework (Manifest V3)
 
-Task & Checklist Management: Organize tasks into expandable categories with progress percentage badges.
+UI: React 18 + TypeScript
 
-Inline Editing: Double-click or tap the edit icon to rename categories and subtasks inline.
+State & Storage: @plasmohq/storage (Local Storage Engine)
 
-Clipboard Manager: Capture, store, and pin text snippets with a one-click system clipboard grabber and fast copy-to-clipboard actions.
+Audio Engine: Web Audio API (Synthesized Micro-Acoustics)
 
-Snippet-to-Task Conversion: Convert any saved clipboard snippet directly into a new task with a single tap.
+Styling: Glassmorphism CSS + Fluid Transitions
 
-Acoustic Audio Engine: Procedural Web Audio API sound effects for clicks, adds, completions, and deletions without external audio assets.
+⚡ Key Features
+Adaptive Glassmorphism: Translucent frosted-glass interface with synchronized Dark and Light modes.
 
-Dark & Light Mode: Persistent theme switcher with custom-tailored palettes and glowing atmospheric backdrops.
+Micro-Acoustic Feedback: Synthesized audio chimes for task completions, pops, and deletions with zero external audio assets.
 
-Local Storage Persistence: Uses @plasmohq/storage backed by chrome.storage.local to support large code snippets and text blocks.
+Inline Task Editing: Double-click or trigger inline editing for task lists and subtasks on the fly.
 
-Tech Stack
-Framework: Plasmo Framework
+Instant Clipboard Suite: One-click system clipboard grabber, snippet pinboard, and direct snippet-to-task conversion.
 
-UI Library: React 18
+Infinite Local Storage: Backed by chrome.storage.local to handle large code blocks, logs, and multi-line text without quota limits.
 
-Language: TypeScript
+📥 Download & Installation
+To install the pre-built unpacked extension directly in Chrome:
 
-State & Storage: @plasmohq/storage
+Download the latest release build (task-flow-v1.0.0.zip).
 
-Audio: Web Audio API (Synthesized in-browser)
-
-Project Structure
-Plaintext
-todo-extension/
-├── assets/
-│   └── icon.png          # Extension icon (512x512 PNG)
-├── src/
-│   └── popup.tsx         # Main popup interface & state logic
-├── package.json          # Manifest permissions & dependencies
-├── tsconfig.json         # TypeScript configuration
-└── README.md
-Getting Started
-Prerequisites
-Node.js (version 18+ recommended)
-
-npm or pnpm
-
-Installation
-Clone the repository:
-
-Bash
-git clone https://github.com/your-username/task-flow.git
-cd task-flow
-Install dependencies:
-
-Bash
-npm install
-Start the development server:
-
-Bash
-npm run dev
-Load the extension in Chrome:
+Extract the .zip archive on your machine.
 
 Open Chrome and navigate to chrome://extensions.
 
-Enable Developer mode in the top right corner.
+Enable Developer mode in the top-right corner.
 
-Click Load unpacked.
+Click Load unpacked and select the extracted folder.
 
-Select the build/chrome-mv3-dev folder generated in your project directory.
+🚀 How to Run (Development)
+To modify or run the extension from source:
 
-Production Build
-To package the extension for production or deployment to the Chrome Web Store:
+Clone and install dependencies:
+
+Bash
+npm install
+Start the hot-reloading development server:
+
+Bash
+npm run dev
+Build for production:
 
 Bash
 npm run build
-The production-ready bundle will be output to the build/chrome-mv3-prod directory.
-
-To create a zipped package ready for store submission:
+Package for Chrome Web Store:
 
 Bash
 npm run package
-Permissions
-Configured in package.json under the "manifest" field:
-
-storage: Persists categories, subtasks, clipboard snippets, and theme preferences.
-
-clipboardRead: Allows reading the system clipboard for the quick-grab feature.
-
-clipboardWrite: Allows copying snippets directly back to your clipboard.
