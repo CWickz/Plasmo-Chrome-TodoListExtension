@@ -1,57 +1,28 @@
-#Task Flow v1.0 ⚡
-A high-performance, glassmorphic task manager and clipboard suite built for Chrome using Plasmo, React, and TypeScript.
+# Task Flow v1.0 ⚡
 
-###🛠️ Tech Stack
-Framework: Plasmo Framework (Manifest V3)
+A high-performance task manager and clipboard suite built with Plasmo, React, and TypeScript.
 
-UI: React 18 + TypeScript
+### 🛠️ Tech Stack
 
-State & Storage: @plasmohq/storage (Local Storage Engine)
+* **Framework**: Plasmo (Manifest V3)
+* **UI**: React + TypeScript
+* **Storage**: `@plasmohq/storage` (Local Storage Engine)
+* **Audio**: Web Audio API (Synthesized Micro-Acoustics)
+* **Styling**: Glassmorphism CSS + Fluid Transitions
 
-Audio Engine: Web Audio API (Synthesized Micro-Acoustics)
+### ⚡ Key Features
 
-Styling: Glassmorphism CSS + Fluid Transitions
+* **Adaptive Glassmorphism**: Translucent frosted-glass UI with synchronized Dark and Light modes.
+* **Micro-Acoustic Feedback**: Synthesized audio chimes for task completions, pops, and deletions with zero external audio assets.
+* **Inline Task Editing**: Double-click or tap the edit icon to rename categories and subtasks on the fly.
+* **Instant Clipboard Suite**: One-click system clipboard grabber, snippet pinboard, and direct snippet-to-task conversion.
+* **Infinite Local Storage**: Backed by `chrome.storage.local` to handle large code blocks and multi-line text without quota limits.
 
-###⚡ Key Features
-Adaptive Glassmorphism: Translucent frosted-glass interface with synchronized Dark and Light modes.
+### 🚀 How to Run (Development)
 
-Micro-Acoustic Feedback: Synthesized audio chimes for task completions, pops, and deletions with zero external audio assets.
+If you want to build or modify the project from source:
 
-Inline Task Editing: Double-click or trigger inline editing for task lists and subtasks on the fly.
-
-Instant Clipboard Suite: One-click system clipboard grabber, snippet pinboard, and direct snippet-to-task conversion.
-
-Infinite Local Storage: Backed by chrome.storage.local to handle large code blocks, logs, and multi-line text without quota limits.
-
-###📥 Download & Installation
-To install the pre-built unpacked extension directly in Chrome:
-
-Download the latest release build (task-flow-v1.0.0.zip).
-
-Extract the .zip archive on your machine.
-
-Open Chrome and navigate to chrome://extensions.
-
-Enable Developer mode in the top-right corner.
-
-Click Load unpacked and select the extracted folder.
-
-###🚀 How to Run (Development)
-To modify or run the extension from source:
-
-Clone and install dependencies:
-
-Bash
-npm install
-Start the hot-reloading development server:
-
-Bash
-npm run dev
-Build for production:
-
-Bash
-npm run build
-Package for Chrome Web Store:
-
-Bash
-npm run package
+1. `npm install`
+2. `npm run dev`
+3. Build for Chrome: `npm run build`
+4. Package for Web Store: `npm run package`
