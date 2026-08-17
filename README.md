@@ -1,33 +1,90 @@
-This is a [Plasmo extension](https://docs.plasmo.com/) project bootstrapped with [`plasmo init`](https://www.npmjs.com/package/plasmo).
+Task Flow
+A modern, glassmorphic Chrome extension designed for effortless task management and quick clipboard snippet storage. Built with Plasmo, React, and TypeScript.
 
-## Getting Started
+Features
+Glassmorphic UI & Smooth Animation: Modern frosted-glass aesthetic with fluid micro-interactions and smooth elastic scrolling.
 
-First, run the development server:
+Task & Checklist Management: Organize tasks into expandable categories with progress percentage badges.
 
-```bash
-pnpm dev
-# or
+Inline Editing: Double-click or tap the edit icon to rename categories and subtasks inline.
+
+Clipboard Manager: Capture, store, and pin text snippets with a one-click system clipboard grabber and fast copy-to-clipboard actions.
+
+Snippet-to-Task Conversion: Convert any saved clipboard snippet directly into a new task with a single tap.
+
+Acoustic Audio Engine: Procedural Web Audio API sound effects for clicks, adds, completions, and deletions without external audio assets.
+
+Dark & Light Mode: Persistent theme switcher with custom-tailored palettes and glowing atmospheric backdrops.
+
+Local Storage Persistence: Uses @plasmohq/storage backed by chrome.storage.local to support large code snippets and text blocks.
+
+Tech Stack
+Framework: Plasmo Framework
+
+UI Library: React 18
+
+Language: TypeScript
+
+State & Storage: @plasmohq/storage
+
+Audio: Web Audio API (Synthesized in-browser)
+
+Project Structure
+Plaintext
+todo-extension/
+├── assets/
+│   └── icon.png          # Extension icon (512x512 PNG)
+├── src/
+│   └── popup.tsx         # Main popup interface & state logic
+├── package.json          # Manifest permissions & dependencies
+├── tsconfig.json         # TypeScript configuration
+└── README.md
+Getting Started
+Prerequisites
+Node.js (version 18+ recommended)
+
+npm or pnpm
+
+Installation
+Clone the repository:
+
+Bash
+git clone https://github.com/your-username/task-flow.git
+cd task-flow
+Install dependencies:
+
+Bash
+npm install
+Start the development server:
+
+Bash
 npm run dev
-```
+Load the extension in Chrome:
 
-Open your browser and load the appropriate development build. For example, if you are developing for the chrome browser, using manifest v3, use: `build/chrome-mv3-dev`.
+Open Chrome and navigate to chrome://extensions.
 
-You can start editing the popup by modifying `popup.tsx`. It should auto-update as you make changes. To add an options page, simply add a `options.tsx` file to the root of the project, with a react component default exported. Likewise to add a content page, add a `content.ts` file to the root of the project, importing some module and do some logic, then reload the extension on your browser.
+Enable Developer mode in the top right corner.
 
-For further guidance, [visit our Documentation](https://docs.plasmo.com/)
+Click Load unpacked.
 
-## Making production build
+Select the build/chrome-mv3-dev folder generated in your project directory.
 
-Run the following:
+Production Build
+To package the extension for production or deployment to the Chrome Web Store:
 
-```bash
-pnpm build
-# or
+Bash
 npm run build
-```
+The production-ready bundle will be output to the build/chrome-mv3-prod directory.
 
-This should create a production bundle for your extension, ready to be zipped and published to the stores.
+To create a zipped package ready for store submission:
 
-## Submit to the webstores
+Bash
+npm run package
+Permissions
+Configured in package.json under the "manifest" field:
 
-The easiest way to deploy your Plasmo extension is to use the built-in [bpp](https://bpp.browser.market) GitHub action. Prior to using this action however, make sure to build your extension and upload the first version to the store to establish the basic credentials. Then, simply follow [this setup instruction](https://docs.plasmo.com/framework/workflows/submit) and you should be on your way for automated submission!
+storage: Persists categories, subtasks, clipboard snippets, and theme preferences.
+
+clipboardRead: Allows reading the system clipboard for the quick-grab feature.
+
+clipboardWrite: Allows copying snippets directly back to your clipboard.
