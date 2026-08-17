@@ -1,7 +1,7 @@
-Task Flow v1.0 ⚡
+#Task Flow v1.0 ⚡
 A high-performance, glassmorphic task manager and clipboard suite built for Chrome using Plasmo, React, and TypeScript.
 
-🛠️ Tech Stack
+###🛠️ Tech Stack
 Framework: Plasmo Framework (Manifest V3)
 
 UI: React 18 + TypeScript
@@ -12,7 +12,7 @@ Audio Engine: Web Audio API (Synthesized Micro-Acoustics)
 
 Styling: Glassmorphism CSS + Fluid Transitions
 
-⚡ Key Features
+###⚡ Key Features
 Adaptive Glassmorphism: Translucent frosted-glass interface with synchronized Dark and Light modes.
 
 Micro-Acoustic Feedback: Synthesized audio chimes for task completions, pops, and deletions with zero external audio assets.
@@ -23,7 +23,7 @@ Instant Clipboard Suite: One-click system clipboard grabber, snippet pinboard, a
 
 Infinite Local Storage: Backed by chrome.storage.local to handle large code blocks, logs, and multi-line text without quota limits.
 
-📥 Download & Installation
+###📥 Download & Installation
 To install the pre-built unpacked extension directly in Chrome:
 
 Download the latest release build (task-flow-v1.0.0.zip).
@@ -36,7 +36,7 @@ Enable Developer mode in the top-right corner.
 
 Click Load unpacked and select the extracted folder.
 
-🚀 How to Run (Development)
+###🚀 How to Run (Development)
 To modify or run the extension from source:
 
 Clone and install dependencies:
