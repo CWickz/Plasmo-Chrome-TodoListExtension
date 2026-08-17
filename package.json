@@ -1,8 +1,8 @@
 {
   "name": "todo-extension",
-  "displayName": "Todo extension",
+  "displayName": "Task Flow",
   "version": "0.0.1",
-  "description": "A Todo list using Plasmo Framework",
+  "description": "A Todo and Clipboard Manager Chrome extension using Plasmo Framework",
   "author": "Chamara",
   "scripts": {
     "dev": "plasmo dev",
@@ -27,7 +27,8 @@
   "manifest": {
     "permissions": [
       "storage",
-      "identity"
+      "clipboardRead",
+      "clipboardWrite"
     ],
     "host_permissions": [
       "https://*/*"
